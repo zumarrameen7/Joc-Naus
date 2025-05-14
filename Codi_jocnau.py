@@ -317,6 +317,3 @@ while True:
 
     pygame.display.update()
     clock.tick(fps)
-
-    pygame.display.update()
-    clock.tick(fps)
