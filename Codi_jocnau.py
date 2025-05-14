@@ -1,10 +1,9 @@
 import sys
 import time
-from pygame.examples.video import backgrounds
-from pygame.locals import *
+from pygame import *
 import pygame
 
-from concurs import pantalla
+#from concurs import pantalla
 
 # INITAL SETUP
 pygame.mixer.pre_init(44100, -16, 2, 2048)
@@ -15,8 +14,8 @@ guanyador = 0
 AMPLADA = 800
 ALTURA = 600
 fps = 30
-pantalla = pygame.display.set_mode(AMPLADA, ALTURA)
-pygame.display.set_mode("Arcade")
+pantalla = pygame.display.set_mode((AMPLADA, ALTURA))
+pygame.display.set_caption("Arcade")
 
 BACKGROUND_IMAGE = 'assets/fons.png'
 MUSICA_FONS = 'assets/Carnival.mp3'
@@ -315,6 +314,9 @@ while True:
             if vides_jugador1 <= 0:
                 guanyador = 2
 
+
+    pygame.display.update()
+    clock.tick(fps)
 
     pygame.display.update()
     clock.tick(fps)
